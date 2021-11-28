@@ -116,3 +116,12 @@ function appendMovies(d) {
 //     let movies = await searchMovies();
 
 // }
+var home = document.getElementById("home");
+var comics = document.getElementById("comics");
+var url = window.location.pathname;
+console.log(url);
+if (url === "/" || url === "/index.html") {
+  home.style.background = "#d32117";
+} else {
+  comics.style.background = "#d32117";
+}

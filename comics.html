@@ -112,10 +112,10 @@
         <img src="./Marvel.png" style="background-color: white; border: 2px white solid; padding: 2px" />
         <div style="width: 30%; display: flex; justify-content: center">
             <div class="divA">
-                <a href="/index.html">Home</a>
+                <a href="/index.html" id="home">Home</a>
             </div>
             <div class="divA">
-                <a href="/comics.html">Comic's</a>
+                <a href="/comics.html" id="comics">Comic's</a>
             </div>
             <div class="divA">
                 <a href="/">Contact Us</a>
@@ -125,4 +125,13 @@
 </body>
 
 </html>
-<script src="./code.js"></script>
+<!-- <script src="./code.js"></script> -->
+
+<script>
+    var comics = document.getElementById("comics");
+    var url = window.location.pathname;
+    console.log(url);
+    if (url === "/comics.html") {
+        comics.style.background = "#d32117";
+    }
+</script>
