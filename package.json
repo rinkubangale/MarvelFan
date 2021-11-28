@@ -1,0 +1,11 @@
+{
+  "name": "marvel-heroes",
+  "version": "1.0.0",
+  "description": "A project from marvel fans",
+  "main": "index.html",
+  "scripts": {
+    "test": "index.html"
+  },
+  "author": "",
+  "license": "ISC"
+}

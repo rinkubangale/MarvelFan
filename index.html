@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Fan</title>
+</head>
+<style>
+    body {
+        width: 100%;
+        background-image: url("./IronMan.jpg");
+        background-size: 100% 100vh;
+        overflow: hidden;
+        position: absolute;
+        margin: 0;
+    }
+
+    input {
+        margin-left: 40%;
+        color: white !important;
+        font-weight: bold;
+        border-style: hidden;
+        border-bottom: 1px solid white;
+        background: rgb(45, 3, 4);
+        width: 290px;
+        height: 50px;
+        font-size: 18px;
+        border-radius: 25px 25px 0 0;
+        padding-left: 20px;
+    }
+
+    input:focus {
+        outline: none;
+        color: white;
+    }
+
+    body>img {
+        margin-top: -80px;
+        margin-left: 43%;
+        width: 40%;
+    }
+
+    #movies {
+        margin-left: 40%;
+        border-radius: 0% 0% 5% 5%;
+        color: white;
+        width: 312px;
+        height: 200px;
+        background: transparent;
+        border-top: none;
+        overflow: auto;
+    }
+
+    ::-webkit-scrollbar {
+        width: 5px;
+        margin-right: 10px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: grey;
+        border-radius: 50px;
+    }
+
+    ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgb(255, 255, 255);
+        border-radius: 50px;
+    }
+
+    .search {
+        position: absolute;
+        color: white;
+        left: 31%;
+        top: 135%;
+    }
+
+    .close {
+        width: fit-content;
+        transform: rotate(45deg) !important;
+        position: absolute;
+        top: 8px;
+        right: -105px;
+        cursor: pointer;
+        margin: 0;
+        font-size: 30px;
+        font-weight: 100;
+        color: white;
+    }
+
+    .navbar {
+        position: relative;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: fit-content;
+        background-color: white;
+    }
+
+    .navbar>img {
+        width: 15%;
+    }
+
+    .divA>a {
+        width: max-content;
+        height: 100%;
+        padding: 18px;
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        /* border: 1px solid red; */
+    }
+
+    .divA>a:hover {
+        background-color: #d32117;
+        color: #fff !important;
+    }
+</style>
+
+<body>
+    <div class="navbar">
+        <img src="./Marvel.png" style="background-color: white; border: 2px white solid; padding: 2px" />
+        <div style="width: 30%; display: flex; justify-content: center">
+            <div class="divA">
+                <a href="/index.html">Home</a>
+            </div>
+            <div class="divA">
+                <a href="/comics.html">Comic's</a>
+            </div>
+            <div class="divA">
+                <a href="/">Contact Us</a>
+            </div>
+        </div>
+    </div>
+    <div class="search">
+        <input placeholder="Search" oninput="throttle()" type="text" id="query" placeholder="Search..."
+            style="color: #fff" />
+        <div class="close" id="close">+</div>
+        <div id="movies"></div>
+    </div>
+</body>
+
+</html>
+
+<script src="code.js"></script>
